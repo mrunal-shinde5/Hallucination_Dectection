@@ -1,0 +1,283 @@
+name: Release
+
+# A merge to main releases only when its pull request carried the `release` label. The tag
+# is created here rather than by hand, and the version is read back off that tag by
+# hatch-vcs, so what is tagged and what is built cannot disagree.
+#
+# The chain runs inside one workflow. Chaining through `workflow_run` on a pushed tag
+# would never fire: a push made with GITHUB_TOKEN does not start a workflow run, so the
+# tag would appear and nothing would build.
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+# Serialised, not cancelled: two merges landing together must not both compute "the next
+# tag" from the same base, and abandoning a run part-way through leaves a tag with no
+# release against it.
+concurrency:
+  group: release-main
+  cancel-in-progress: false
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read
+    outputs:
+      release: ${{ steps.check.outputs.release }}
+    steps:
+      # A push event carries no labels, so the merged pull request is resolved from the
+      # commit and its labels read back. A commit that belongs to no pull request -- a
+      # direct push to main -- releases nothing, which is the safe default: a version
+      # number is spent permanently and cannot be reissued.
+      - name: Look for the release label on the merged pull request
+        id: check
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          labels=$(gh api "repos/$REPO/commits/$SHA/pulls" --jq '[.[].labels[].name] | join(" ")')
+          echo "labels on the merged pull request: ${labels:-<none>}"
+          if printf '%s' "$labels" | tr ' ' '\n' | grep -qx release; then
+            echo "release=true" >> "$GITHUB_OUTPUT"
+            echo "labelled release: tagging and publishing"
+          else
+            echo "release=false" >> "$GITHUB_OUTPUT"
+            echo "not labelled release: nothing is tagged or published"
+          fi
+
+  # A label says a release is wanted; it says nothing about whether the commit works.
+  # Branch protection gates the pull request, not the merge result, and a re-run is gated
+  # by nothing at all -- so the suite is run here against the exact commit being released.
+  tests:
+    needs: gate
+    if: needs.gate.outputs.release == 'true'
+    permissions:
+      contents: read
+      checks: write         # a called workflow cannot hold more than its caller grants
+      pull-requests: write
+    uses: ./.github/workflows/tests.yaml
+
+  tag:
+    needs: [gate, tests]
+    if: needs.gate.outputs.release == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # create and push the tag
+    outputs:
+      tag: ${{ steps.bump.outputs.tag }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # bump-my-version reads the current version from the most recent reachable tag,
+          # so the tag history is its input, not just the build's.
+          fetch-depth: 0
+          lfs: true
+
+      - uses: astral-sh/setup-uv@61cb8a9741eeb8a550a1b8544337180c0fc8476b  # v7.2.0
+        with:
+          enable-cache: true
+
+      - name: Compute and create the next tag
+        id: bump
+        run: |
+          # Annotated tags carry a tagger, which a runner has no identity for by default.
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Configured to write no files and make no commit, so this only tags HEAD --
+          # which is what keeps the tag an ancestor of main and reachable by `describe`.
+          uvx bump-my-version bump patch
+          tag=$(git describe --tags --exact-match HEAD)
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+          echo "tagged $tag"
+
+      - name: Push the tag
+        env:
+          TAG_NAME: ${{ steps.bump.outputs.tag }}
+        run: git push origin "$TAG_NAME"
+
+  build:
+    needs: tag
+    permissions:
+      contents: read
+      id-token: write  # a called workflow cannot hold more than its caller grants
+    uses: ./.github/workflows/build.yaml
+    with:
+      tag: ${{ needs.tag.outputs.tag }}
+
+  publish-testpypi:
+    needs: [tag, build]
+    runs-on: ubuntu-latest
+    environment:
+      name: testpypi
+      url: https://test.pypi.org/p/artefactual
+    permissions:
+      id-token: write  # Required for TestPyPI trusted publishing
+    steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: python-package-distributions
+          path: dist/
+
+      - name: Publish to TestPyPI
+        uses: pypa/gh-action-pypi-publish@ed0c53931b1dc9bd32cbe73a98c7f6766f8a527e
+        with:
+          repository-url: https://test.pypi.org/legacy/
+          print-hash: true
+          # A re-run of a release whose upload already landed must reach the check below
+          # rather than stopping at a duplicate-file rejection. Deliberately not set on the
+          # PyPI job, where a version that already exists is a real error.
+          skip-existing: true
+
+      # What TestPyPI adds over the build job is the registry's own reading of the upload.
+      # The distributions are already built, checked and proven installable by then, so
+      # what is unverified until now is that the index received exactly those files and
+      # serves usable metadata for them. Wrong here is wrong on PyPI too, and a released
+      # version cannot be reissued.
+      - name: Check the metadata TestPyPI serves
+        run: |
+          set -euo pipefail
+          # Unglobbed into an array first: `basename dist/*.whl` would silently read a
+          # second wheel as a suffix argument and return a truncated name. nullglob so a
+          # missing wheel gives an empty array rather than the unexpanded pattern, which
+          # would otherwise pass the count check and yield a version of "*.whl".
+          shopt -s nullglob
+          wheels=(dist/*.whl)
+          if [ "${#wheels[@]}" -ne 1 ]; then
+            echo "::error::expected exactly one wheel in dist/, found ${#wheels[@]}"
+            exit 1
+          fi
+          # Taken from the wheel rather than from the tag: the build job has already
+          # checked the two agree, and this is the version as PEP 440 normalises it, which
+          # is the form the index answers to.
+          version=$(basename "${wheels[0]}" | cut -d- -f2)
+          served="$RUNNER_TEMP/served.json"
+
+          # Only "is it served yet" retries. Wrapping the checks below in the retry would
+          # report every one of their failures as a timeout, naming the wrong cause.
+          # Looped rather than left to `curl --retry`, whose backoff against this endpoint
+          # is not bounded by --retry-delay and reports a timeout instead of the HTTP error.
+          for attempt in $(seq 1 10); do
+            curl -sfL -o "$served" "https://test.pypi.org/pypi/artefactual/$version/json" && break
+            echo "$version not served yet, retrying in 15s (attempt $attempt of 10)"
+            sleep 15
+          done
+          if [ ! -s "$served" ]; then
+            echo "::error::artefactual $version never appeared on TestPyPI"
+            exit 1
+          fi
+
+          # The files served must be exactly the ones just built: same content, none
+          # missing, none extra. This is also what makes `skip-existing` safe -- a version
+          # that already exists carrying different files fails here instead of being
+          # silently kept.
+          jq -r '.urls[] | "\(.digests.sha256)  \(.filename)"' "$served" > "$RUNNER_TEMP/served.sha256"
+          (cd dist && sha256sum -c "$RUNNER_TEMP/served.sha256")
+          # sha256sum -c only checks the files the index lists, so the counts are compared
+          # too: a build that produced a distribution the upload dropped fails here. Only
+          # distributions are counted -- publishing writes a .publish.attestation next to
+          # each file it uploads, and those are not themselves distributions.
+          distributions=(dist/*.whl dist/*.tar.gz)
+          serving=$(jq '.urls | length' "$served")
+          built=${#distributions[@]}
+          if [ "$serving" -ne "$built" ]; then
+            echo "::error::TestPyPI serves $serving file(s), $built were built"
+            exit 1
+          fi
+
+          problems=$(jq -r '[
+            (if (.info.requires_python // "") == "" then "requires_python is empty: every Python would be offered this release" else empty end),
+            (if (.info.description // "") == "" then "description is empty: the project page would render blank" else empty end),
+            (if .info.description_content_type != "text/markdown" then "description_content_type is \(.info.description_content_type | tojson), expected text/markdown" else empty end),
+            (if (.info.summary // "") == "" then "summary is empty" else empty end),
+            (if (.info.license_expression // "") == "" then "license_expression is empty" else empty end),
+            (if (.info.project_urls // {}) == {} then "project_urls is empty" else empty end)
+          ] | .[]' "$served")
+          if [ -n "$problems" ]; then
+            printf '%s\n' "$problems" | sed 's/^/::error::/'
+            exit 1
+          fi
+
+          jq -r '"metadata checks passed for \(.info.name) \(.info.version):",
+                 "  requires_python: \(.info.requires_python)",
+                 "  dependencies:    \(.info.requires_dist | length) entries",
+                 "  description:     \(.info.description | length) chars of \(.info.description_content_type)"' "$served"
+
+  publish:
+    needs: [tag, build, publish-testpypi]
+    runs-on: ubuntu-latest
+    # The reviewer on this environment holds the upload itself, which is the irreversible
+    # step: the tag before it is cheap to delete, a PyPI version is not reusable.
+    environment:
+      name: pypi
+      url: https://pypi.org/p/artefactual
+    # Only the credential needed to upload. Nothing in this job can write to the
+    # repository, so a compromised step here cannot both mint a PyPI token and push.
+    permissions:
+      id-token: write  # Required for PyPI trusted publishing
+    steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: python-package-distributions
+          path: dist/
+
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@ed0c53931b1dc9bd32cbe73a98c7f6766f8a527e  # v1.13.0
+        with:
+          print-hash: true
+          attestations: true
+
+  # Announced only once PyPI actually has the release. Created before the upload, a failed
+  # publish would leave a Release advertising a version that does not exist and whose tag
+  # cannot be reissued; this way a failure here leaves PyPI correct and a Release to add.
+  github-release:
+    needs: [tag, publish]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # create the GitHub Release
+    env:
+      TAG_NAME: ${{ needs.tag.outputs.tag }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.tag.outputs.tag }}
+          fetch-depth: 0  # git-cliff reads the commits since the previous tag
+          lfs: true
+
+      - uses: astral-sh/setup-uv@61cb8a9741eeb8a550a1b8544337180c0fc8476b  # v7.2.0
+        with:
+          enable-cache: true
+
+      - name: Generate changelog
+        id: changelog
+        run: |
+          uvx git-cliff --latest --tag "$TAG_NAME" -o RELEASE_NOTES.md
+          {
+            echo 'notes<<EOF'
+            cat RELEASE_NOTES.md
+            echo 'EOF'
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: python-package-distributions
+          path: dist/
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@a06a81a03ee405af7f2048a818ed3f03bbf83c7b  # v2.5.0
+        with:
+          tag_name: ${{ env.TAG_NAME }}
+          name: ${{ env.TAG_NAME }}
+          body: ${{ steps.changelog.outputs.notes }}
+          files: |
+            dist/*.whl
+            dist/*.tar.gz

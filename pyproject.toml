@@ -1,0 +1,312 @@
+[project]
+name = "artefactual"
+dynamic = ["version"]
+description = "Hallucination detection for black-box LLMs from token log-probabilities"
+readme = "README.md"
+authors = [
+    { name = "Hicham Randrianarivo", email = "hicham.randrianarivo@artefact.com" },
+    { name = "Gauthier Jeannin", email = "gauthier.jeannin@artefact.com" },
+    { name = "Charles Moslonka", email = "charles.moslonka@artefact.com" },
+    { name = "Charlotte Le Bihan", email = "charlotte.lebihan@student-cs.fr" },
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+requires-python = ">=3.11,<3.14"
+classifiers = [
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "absl-py>=2.1.0",
+    "beartype>=0.19.0",
+    "pydantic>=2.12.5",
+    "numpy>=1.24.0",
+    # 1.8 is the floor the published detectors impose, not a preference: they are skops
+    # dumps of a LogisticRegression fitted under a newer scikit-learn, and 1.7 reads
+    # `multi_class` off the loaded estimator, which those files do not carry. 1.8 also
+    # requires Python >= 3.11, which is where `requires-python` above comes from.
+    "scikit-learn>=1.8.0",
+    "skops>=0.14.0",
+    "huggingface-hub>=0.30.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/artefactory/artefactual"
+Repository = "https://github.com/artefactory/artefactual"
+Issues = "https://github.com/artefactory/artefactual/issues"
+
+[project.optional-dependencies]
+adapters = [
+    "langfuse>=4.8.1",
+    "openai>=2.41.1",
+]
+docs = [
+    "myst-parser~=4.0.1",
+    "nbsphinx~=0.9.8",
+    "pydata-sphinx-theme~=0.16.1",
+    "sphinx~=8.1.3",
+    "sphinx-autodoc-typehints~=3.0.1",
+    "sphinx-llms-txt>=0.7.1",
+]
+
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+# The version comes from the most recent tag reachable from HEAD, so a build carries the
+# version of the release it was cut from and no committed file restates it.
+[tool.hatch.version]
+source = "vcs"
+
+# Without this the default scheme guesses the *next* version by incrementing the last
+# component -- 2026.07.0 becomes 2026.7.1.devN. Under CalVer the next release is
+# 2026.08.0, so that guess names a version that will never exist. `no-guess-dev` counts
+# forward from the released tag instead: 2026.7.0.post1.devN.
+raw-options = { version_scheme = "no-guess-dev" }
+
+# Build output, generated from the tag and never committed, holding the version as a
+# literal for `__init__.py` to import. Written to its own module because the hook
+# overwrites whatever file it targets.
+[tool.hatch.build.hooks.vcs]
+version-file = "src/artefactual/_version.py"
+
+# hatch-vcs offers hatchling every path the VCS knows about, and with no explicit target
+# the sdist takes the repository root -- .jj, .workspaces and the docs build included,
+# which is 22 MB of working state a user never asked for. Both targets are named here so
+# what ships is what the package needs to build and be tested.
+[tool.hatch.build.targets.sdist]
+# Anchored with a leading slash: unanchored, `src/artefactual` also matches
+# `.workspaces/<name>/src/artefactual`, and a jj workspace checked out under the repo
+# would be packaged along with it.
+include = [
+    "/src/artefactual",
+    "/tests",
+    "/pyproject.toml",
+    "/README.md",
+    "/LICENSE",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/artefactual"]
+
+
+[dependency-groups]
+dev = [
+    "datasets>=3.2.0",
+    "einops>=0.8.0",
+    "faiss-cpu>=1.9.0.post1",
+    "fastembed>=0.4.2 ; sys_platform == 'darwin'",
+    "grain>=0.2.3",
+    "ipython>=8.31.0",
+    "jinja2>=3.1.5",
+    "jupytext>=1.16.6",
+    "plum-dispatch>=2.5.7",
+    "scikeras>=0.13.0",
+    "toolz>=1.0.0",
+    "wandb>=0.19.4",
+    "mlcroissant>=1.0.12",
+    "polars>=1.21.0",
+    "orjson>=3.10.15",
+    "tokenizers>=0.21.0",
+    "transformers>=4.48.1",
+    "outlines>=0.1.11",
+    "pudb>=2024.1.3",
+    "pydantic>=2.10.6",
+    "jupyterlab>=4.3.5",
+    "hypothesis>=6.127.8",
+    "ruff>=0.14.8,<0.15",
+    "ty>=0.0.1a32",
+    "pre-commit>=4.0.0",
+    "bump-my-version>=0.28.0",
+    "git-cliff>=2.12.0",
+    "pytest>=8.0.0",
+    "pytest-cov>=6.0.0",
+]
+
+[tool.coverage.run]
+# `source` (not `--cov=artefactual`) so the namespace package under adapters/ lands in
+# the denominator too — it has no __init__.py, and the package-name scanner walks
+# right past it.
+source = ["src/artefactual"]
+
+[tool.coverage.report]
+exclude_also = [
+    "if TYPE_CHECKING:",
+    "if typing.TYPE_CHECKING:",
+    "raise NotImplementedError",
+]
+
+[tool.codespell]
+ignore-words-list = "rouge,ans"
+
+[tool.ruff]
+preview = true
+target-version = "py310"
+line-length = 120
+output-format = "concise"
+extend-exclude = [
+    "demo_uncertainty_notebook.ipynb",
+    "demo.ipynb",
+    "demo_uncertainty.py",
+    "scripts/**/*",
+]
+
+[tool.ruff.format]
+docstring-code-format = true
+docstring-code-line-length = 80
+
+[tool.ruff.lint]
+select = [
+    "A",   # builtins abuse (pep8-naming + flake8-builtins)
+    "ARG", # unused arguments
+    "B",   # bugbear correctness warnings
+    "BLE", # blind/overbroad excepts
+    "C",   # complexity checks
+    "DTZ", # naive datetime usage
+    "E",   # pycodestyle errors
+    "EM",  # error message construction
+    "F",   # pyflakes correctness
+    "FBT", # boolean traps
+    "I",   # import sorting
+    "ICN", # import conventions
+    "ISC", # implicit string concatenation
+    "LOG", # logging format/usage
+    "N",   # naming
+    "PTH", # prefer pathlib over os.path
+    "PLE", # pylint errors
+    "PIE", # pie comprehensions / misc correctness
+    "RET", # return statement consistency
+    "RUF", # Ruff-specific rules
+    "S",   # security (bandit)
+    "SIM", # simplify overcomplicated code
+    "SLF", # private/protected member access
+    "T",   # type hints
+    "T10", # debug statements
+    "T20", # print statements
+    "TID", # tidy imports
+    "TRY", # safer exception handling
+    "UP",  # pyupgrade
+    "W",   # pycodestyle warnings
+    "FURB",# refurb refactors
+]
+extend-select = [
+    "ANN201", # public functions must have return type
+    "ANN205", # staticmethod must have return type
+    "ANN206", # classmethod must have return type
+    "PLR0911", # too many return statements
+    "PLR0912", # too many branches
+    "PLR0913", # too many arguments
+    "PLR0915", # too many statements
+    "PLR1722", # consider using sys.exit over exit/quit
+]
+
+ignore = [
+    "ISC001",
+    "F811",
+    "SIM117",    # low-signal simplify cases
+    "SIM300",    # low-signal simplify cases
+    "RUF009",    # docstring param order (style)
+    # Formatter conflicts (Ruff docs)
+    "W191",      # tab indentation
+    "E111",      # indentation with invalid multiple
+    "E114",      # indentation with invalid multiple (comment)
+    "E117",      # over-indented
+    "ISC002",    # multi-line implicit string concat (formatter handles)
+    # Bandit: keep only Jinja-template-related ignores
+    "S701", "S702", "S704",
+]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 10
+
+[tool.ruff.lint.pylint]
+# The detector factories take one positional argument and the rest keyword-only; a
+# keyword-only option is not the argument-ordering hazard PLR0913 is guarding against.
+max-args = 8
+
+[tool.ruff.lint.per-file-ignores]
+"**/scripts/*" = [
+    "INP001",
+    "T201",
+    "T20",
+    "PLR0917",
+    "PLR0913",
+    "RUF009",
+    "FBT003",
+    "E501",
+    "PLR0914",
+    "A004",
+]
+"**/tests/**/*" = [
+    "PLC1901",
+    "PLR2004",
+    "PLR6301",
+    "S",
+    "TID252",
+    "ANN",  # allow untyped returns in tests
+]
+"**/*.ipynb" = [
+    "T201",    # print statements allowed in notebooks
+    "T203",    # pprint statements allowed in notebooks
+    "A004",    # notebooks import IPython's `display`, which shadows a builtin
+    "ANN",     # type annotations not required in notebooks
+    "B905",    # zip() without strict is fine in notebooks
+    "E501",    # line length relaxed in notebooks
+    "PLR2004", # magic values allowed in notebooks
+    "S101",    # assert allowed in notebooks
+    "ERA001",  # commented-out code allowed in notebooks
+    "F401",    # unused imports allowed (often for demo/exploration)
+    "INP001",  # implicit namespace package
+    "A004",    # IPython's display shadows a builtin; that is the documented import
+]
+"examples/*.ipynb" = ["T201", "T203", "A004"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["artefactual"]
+
+[tool.ruff.lint.flake8-tidy-imports]
+ban-relative-imports = "all"
+
+[tool.ruff.lint.flake8-pytest-style]
+fixture-parentheses = false
+mark-parentheses = false
+
+[tool.jupytext]
+cell_markers = '"""'
+
+[tool.ty]
+
+[tool.ty.terminal]
+output-format = "concise"
+
+[tool.ty.src]
+exclude = ["tests/", "scripts", "examples"]
+
+[tool.ty.rules]
+unresolved-import = "ignore"
+
+# Computes the next version and creates its tag; it writes no files and makes no commit,
+# because the tag is what the version is read from. `current_version` is absent so the
+# current value is discovered from the most recent tag reachable from HEAD, which keeps
+# the two ends of a release -- what is tagged and what is built -- reading the same source.
+[tool.bumpversion]
+parse = """(?x)
+    (?P<release>
+        (?:[1-9][0-9]{3})\\.     # YYYY.
+        (?:1[0-2]|0[1-9])        # 0M
+    )
+    \\.(?P<patch>\\d+)           # .patch
+"""
+serialize = ["{release}.{patch}"]
+commit = false
+tag = true
+tag_name = "v{new_version}"
+
+[tool.bumpversion.parts.release]
+calver_format = "{YYYY}.{0M}"
+
+[tool.bumpversion.parts.patch]
+first_value = "0"

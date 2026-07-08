@@ -1,0 +1,15 @@
+[33mcommit f27ed554a7dfb9337b74a1f4a7679e04f0cf30bd[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author:     Mrunal Shinde <mrunal.shinde2008@gmail.com>
+AuthorDate: Sun Jun 28 18:00:00 2026 +0100
+Commit:     Mrunal Shinde <mrunal.shinde2008@gmail.com>
+CommitDate: Sun Jun 28 18:00:00 2026 +0100
+
+    Implement initial WEPR detector setup and test pipeline
+
+[33mcommit 1fc706a2dc965466513dfe562182ebe3d73606b7[m
+Author:     Mrunal Shinde <mrunal.shinde2008@gmail.com>
+AuthorDate: Sun Jun 21 18:00:00 2026 +0100
+Commit:     Mrunal Shinde <mrunal.shinde2008@gmail.com>
+CommitDate: Sun Jun 21 18:00:00 2026 +0100
+
+    Commit

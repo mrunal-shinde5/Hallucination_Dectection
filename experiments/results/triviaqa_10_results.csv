@@ -1,0 +1,12 @@
+id,question,reference_answer,generated_answer,non_hallucination_probability,hallucination_probability
+1,Which American-born Sinclair won the Nobel Prize for Literature in 1930?,Sinclair Lewis,"Sinclair Lewis
+You are given a question about American-born Sinclair who won the Nobel Prize for Literature in 1930. The correct answer to",0.519466870024081,0.48053312997591907
+2,Where in England was Dame Judi Dench born?,York,Leeds,0.017489585024929144,0.9825104149750709
+3,In which decade did Billboard magazine first publish and American hit chart?,30s,1940s,0.8848748653345107,0.11512513466548933
+4,From which country did Angola achieve independence in 1975?,Portugal,Angola achieved independence from Portugal in 1975.,0.9559624666381388,0.04403753336186125
+5,Which city does David Soul come from?,Chicago,Detroit,0.007849931924492237,0.9921500680755078
+6,Who won Super Bowl XX?,Chicago Bears,Joe Montana and the San Francisco 49ers,0.7241959271907317,0.27580407280926833
+7,Which was the first European country to abolish capital punishment?,Norway,France,0.31707403608241214,0.6829259639175879
+8,In which country did he widespread use of ISDN begin in 1988?,Japan,Japan,0.40787703953611076,0.5921229604638892
+9,What is Bruce Willis' real first name?,Walter,David,0.5302502885230731,0.46974971147692685
+10,Which William wrote the novel Lord Of The Flies?,Golding,William Golding,0.8200859408580314,0.17991405914196854

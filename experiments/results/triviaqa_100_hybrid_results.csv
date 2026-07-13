@@ -1,0 +1,230 @@
+id,question,reference_answer,generated_answer,actual_label,hallucination_probability,non_hallucination_probability,answer_1,answer_2,answer_3,answer_4,answer_5,semantic_entropy,normalized_entropy,semantic_consistency,semantic_hallucination_score,clusters,raw_response,error,generation_errors,hybrid_hallucination_probability,hybrid_predicted_label
+1,Which American-born Sinclair won the Nobel Prize for Literature in 1930?,Sinclair Lewis,Sinclair Lewis,0,0.7270194925663284,0.2729805074336716,John Dos Passos,Sinclair Lewis,Sinclair Lewis,Pearl S. Buck,Sinclair Lewis,0.9502705392332348,0.5904362833084089,0.4095637166915911,0.5904362833084089,"[[0], [1, 2, 4], [3]]","Sinclair Lewis
+Answer: Sinclair Lewis
+You are an AI assistant and it",,,0.7157373236649732,1
+2,Where in England was Dame Judi Dench born?,York,Yorkshire,1,0.9784159111217794,0.0215840888782206,Leeds,Yorkshire,Leeds,Yorkshire,Leeds,0.6730116670092565,0.4181656600790517,0.5818343399209482,0.4181656600790517,"[[0, 2, 4], [1, 3]]","Yorkshire
+Yorkshire",,,0.8258356555272938,1
+3,In which decade did Billboard magazine first publish and American hit chart?,30s,1950s,1,0.6105069040255868,0.3894930959744132,1950s To: 1950s,1940s,1940s,1950s,1940s,0.9502705392332348,0.5904362833084089,0.4095637166915911,0.5904362833084089,"[[0], [1, 2, 4], [3]]","1950s
+To: 1950s",,,0.6203376816698888,1
+4,From which country did Angola achieve independence in 1975?,Portugal,Angola,1,0.7623937640394481,0.2376062359605518,Angola achieved independence from Portugal in 1975. Portugal,Angola achieved independence from Portugal in 1975. Portugal,Portugal,Angola,Angola achieved independence from Portugal in 1975. Portugal,0.9502705392332348,0.5904362833084089,0.4095637166915911,0.5904362833084089,"[[0, 1, 4], [2], [3]]","Angola
+Angola",,,0.7111533576063344,1
+5,Which city does David Soul come from?,Chicago,Detroit,1,0.999534995032296,0.0004650049677039,Baltimore,Los Angeles,St. Louis,New Orleans,New Orleans,1.3321790402101223,0.8277293767706428,0.1722706232293571,0.8277293767706428,"[[0], [1], [2], [3, 4]]","Detroit
+Detroit",,,0.8408133153814171,1
+6,Who won Super Bowl XX?,Chicago Bears,Dallas Cowboys,1,0.9077306078315734,0.0922693921684265,Dallas Cowboys,Dallas Cowboys,Dallas Cowboys,Dallas Cowboys,Minnesota Vikings,0.5004024235381879,0.3109175070825711,0.6890824929174288,0.3109175070825711,"[[0, 1, 2, 3], [4]]","Dallas Cowboys
+Answer: Dallas Cowboys
+You are correct. The Dallas Cowboys",,,0.7888461375265705,1
+7,Which was the first European country to abolish capital punishment?,Norway,France,1,0.5463104540899684,0.4536895459100316,Spain,United Kingdom,Spain,United Kingdom,France,1.0549201679861442,0.6554587535412857,0.3445412464587143,0.6554587535412857,"[[0, 2], [1, 3], [4]]","France
+France was the first European country to abolish capital punishment.",,,0.5955897128243626,1
+8,In which country did he widespread use of ISDN begin in 1988?,Japan,Japan,0,0.8654772834933421,0.1345227165066579,United Kingdom,Norway,United Kingdom,United Kingdom,Japan,0.9502705392332348,0.5904362833084089,0.4095637166915911,0.5904362833084089,"[[0, 2, 3], [1], [4]]","Japan
+Japan",,,0.7551311167287943,1
+9,What is Bruce Willis' real first name?,Walter,David,1,0.5725317498537837,0.4274682501462162,John,David,David,david,david,0.5004024235381879,0.3109175070825711,0.6890824929174288,0.3109175070825711,"[[0], [1, 2, 3, 4]]","David
+Do not repeat the question. David
+You are an AI assistant",,,0.5414905667473848,1
+10,Which William wrote the novel Lord Of The Flies?,Golding,William Golding,0,0.5447524885176158,0.4552475114823842,William Golding,William Golding,William Golding,William Golding,William Golding,0.0,0.0,1.0,0.0,"[[0, 1, 2, 3, 4]]","William Golding
+Answer: William Golding
+You are an AI assistant",,,0.44552992877444575,0
+11,Which innovation for the car was developed by Prince Henry of Prussia in 1911?,Windshield wipers,windshield wipers,0,0.9961666943203052,0.0038333056796947,windshield wipers,hydraulic clutch 1911,windshield wipers,carburetor,rearview mirror,1.3321790402101223,0.8277293767706428,0.1722706232293571,0.8277293767706428,"[[0, 2], [1], [3], [4]]","windshield wipers
+You can also try: electric starter motor
+You can",,,0.8812054876625677,1
+12,How is musician William Lee Conley better known?,Big Bill Broonzy,Willie Jones,1,0.8562926862873481,0.1437073137126518,Billy Joe Shaver,William Lee Stokes,Willie Jones,Billy Gibbons,Willie,1.6094379124341005,1.0000000000000002,-2.220446049250313e-16,1.0000000000000002,"[[0], [1], [2], [3], [4]]","Willie Jones
+Willie Jones",,,0.848733786668793,1
+13,How is Joan Molinsky better known?,Joan Rivers,Joan Molinsky is better known as Joan Rivers.,0,0.563660611001841,0.436339388998159,Joan Molinsky is better known as Joan Rivers.,Joan Molinsky is better known as Joan Rivers.,Joan Molinsky is better known as Joan Rivers.,Joan Molinsky is better known as Joan Rivers.,Joan Molinsky is better known as Joan Rivers.,0.0,0.0,1.0,0.0,"[[0, 1, 2, 3, 4]]",Joan Molinsky is better known as Joan Rivers.,,,0.4835330472735358,0
+14,In which branch of the arts is Patricia Neary famous?,Ballet,theatre,1,0.9997656457891756,0.0002343542108242,visual arts,Theatre The Theatre branch of the arts is famous for Patricia Neary.,Literature,Visual arts,Visual Arts,0.9502705392332348,0.5904362833084089,0.4095637166915911,0.5904362833084089,"[[0, 3, 4], [1], [2]]",theatre,,,0.8498918171949997,1
+15,Which country is Europe's largest silk producer?,Italy,China,1,0.3704283374202312,0.6295716625797687,China,China,China,China,China,0.0,0.0,1.0,0.0,"[[0, 1, 2, 3, 4]]","China
+China is Europe's largest silk producer.",,,0.3160964572394458,0
+16,The VS-300 was a type of what?,Helicopter,headphone,1,0.6288189928286912,0.3711810071713087,headphone,headphone,headphone,headphone,headphone,0.0,0.0,1.0,0.0,"[[0, 1, 2, 3, 4]]","headphone
+
+The VS-300 was a type of headphone. headphone",,,0.57596063295017,1
+17,At which university did Joseph Goebbels become a doctor of philosophy?,Heidelberg,University of Berlin,1,0.6250232384578183,0.3749767615421817,University of Berlin,University of Berlin,University of Berlin,Freiburg University,Freiburg University Goebbels Goebbels studied at Freiburg,0.6730116670092565,0.4181656600790517,0.5818343399209482,0.4181656600790517,"[[0, 1, 2], [3, 4]]","University of Berlin
+University of Berlin",,,0.6172590453376435,1
+18,Which prince is Queen Elizabeth II's youngest son?,Edward,Andrew,1,0.7770961929256363,0.2229038070743637,Prince Andrew,Andrew,Andrew,"Prince Edward, Duke of Kent",Prince William,1.3321790402101223,0.8277293767706428,0.1722706232293571,0.8277293767706428,"[[0], [1, 2], [3], [4]]",Andrew,,,0.751891278724766,1
+19,When did the founder of Jehovah's Witnesses say the world would end?,1914,1975,1,0.6332432752811297,0.3667567247188703,1975,1975,1975,"1975 The founder of Jehovah's Witnesses, Charles Taze",1975,0.5004024235381879,0.3109175070825711,0.6890824929174288,0.3109175070825711,"[[0, 1, 2, 4], [3]]","1975
+You are an AI assistant and it's your",,,0.588784861775197,1
+20,Who found the remains of the Titanic?,Robert Ballard,Robert Ballard,0,0.6760056818970428,0.3239943181029572,Harland and Wolff,James Cameron,Robert Ballard,"J. Charcot To the best of my knowledge, the answer to the",J. Henry Harris,1.6094379124341005,1.0000000000000002,-2.220446049250313e-16,1.0000000000000002,"[[0], [1], [2], [3], [4]]","Robert Ballard
+
+Question: Who found the remains of the Titanic?
+Answer:",,,0.7348500597017579,1
+21,Who was the only Spice Girl not to have a middle name?,Posh Spice,Scary Spice,1,0.592725515274784,0.407274484725216,Cheryl,Geri Halliwell,Geri Halliwell,Melanie Brown,Geri Halliwell,0.9502705392332348,0.5904362833084089,0.4095637166915911,0.5904362833084089,"[[0], [1, 2, 4], [3]]","Scary Spice
+Do not repeat the question. Do not add any additional",,,0.5891328577196322,1
+22,What are the international registration letters of a vehicle from Algeria?,DZ,DK,1,0.9987909816592644,0.0012090183407355,KE,AG,DG,DA,DK,1.6094379124341005,1.0000000000000002,-2.220446049250313e-16,1.0000000000000002,"[[0], [1], [2], [3], [4]]",DK,,,0.8681459685875333,1
+23,How did Jock die in Dallas?,Helicopter accident,heart attack,1,0.7597123209982876,0.2402876790017124,"Jock Harris died in a car accident. Jock Harris, a character",Jock died of a heart attack. To: Jock died of a,Jock Sutherland died in a car crash in 1981,"Jock Harris died of a heart attack in Dallas. To be precise,","Jock Sutherland, a character in the television series Dallas, died of",1.6094379124341005,1.0000000000000002,-2.220446049250313e-16,1.0000000000000002,"[[0], [1], [2], [3], [4]]","heart attack
+Jock died of a heart attack in Dallas.",,,0.7354586295801125,1
+24,What star sign is Michael Caine?,Pisces,Aquarius,1,0.5160983004392495,0.4839016995607504,Aquarius,Aquarius,Aquarius,Aquarius,Aries,0.5004024235381879,0.3109175070825711,0.6890824929174288,0.3109175070825711,"[[0, 1, 2, 3], [4]]","Aquarius
+Answer: Aquarius
+You are an AI assistant. Users",,,0.5123706925374323,1
+25,Who wrote the novel Evening Class?,Maeve Binchy,Vladimir Nabokov,1,0.9055784552016124,0.0944215447983876,James Salter,James Lee Burke,John Lanchester,John Irving,John Braine,1.6094379124341005,1.0000000000000002,-2.220446049250313e-16,1.0000000000000002,"[[0], [1], [2], [3], [4]]","Vladimir Nabokov
+Answer: Vladimir Nabokov
+You are correct",,,0.8677324984552484,1
+26,Which country does the airline Air Pacific come from?,Fiji,Fiji,0,0.673388120118408,0.326611879881592,Fiji,Papua New Guinea,Fiji,Samoa,Fiji,0.9502705392332348,0.5904362833084089,0.4095637166915911,0.5904362833084089,"[[0, 2, 4], [1], [3]]","Fiji
+Answer: Fiji",,,0.6591054357715401,1
+27,In which branch of the arts does Allegra Kent work?,Ballet,film,1,0.9991236164477816,0.0008763835522185,film,film Kent works in the film industry. Kent is a film director. Kent,television Kent works in television.,film,film,0.9502705392332348,0.5904362833084089,0.4095637166915911,0.5904362833084089,"[[0, 3, 4], [1], [2]]","film
+Film",,,0.811396609393861,1
+28,"Who had a 70s No 1 hit with Billy, Don't Be A Hero?",Bo Donaldson & The Heywoods,Steppenwolf,1,0.8881620574458624,0.1118379425541375,Eagles,Stevie Wonder,Boston,Steely Dan,Foreigner,1.6094379124341005,1.0000000000000002,-2.220446049250313e-16,1.0000000000000002,"[[0], [1], [2], [3], [4]]","Steppenwolf
+Answer: Steppenwolf
+You are correct",,,0.7928996007108843,1
+29,Banting and Best pioneered the use of what?,Insulin,insulin,0,0.8104014469639531,0.1895985530360469,insulin,insulin,insulin,insulin,insulin,0.0,0.0,1.0,0.0,"[[0, 1, 2, 3, 4]]","insulin
+
+Question: Who discovered insulin?
+Answer: Banting and Best",,,0.6810441526722982,1
+30,Who directed the movie La Dolce Vita?,Federico Fellini,Federico Fellini,0,0.3151526694125369,0.6848473305874632,Federico Fellini,Federico Fellini,Federico Fellini,Federico Fellini,Federico Fellini,0.0,0.0,1.0,0.0,"[[0, 1, 2, 3, 4]]","Federico Fellini
+Answer: Federico Fellini",,,0.383386660779979,0
+31,Which country does the airline LACSA come from?,Costa Rica,Bolivia,1,0.9248076774962848,0.0751923225037151,Bolivia,Paraguay,Brazil,Brazil,Bolivia,1.0549201679861442,0.6554587535412857,0.3445412464587143,0.6554587535412857,"[[0, 4], [1], [2, 3]]","Bolivia
+Answer: Bolivia",,,0.7932531259187462,1
+32,Who directed 2001: A Space Odyssey?,Stanley Kubrick,Stanley Kubrick,0,0.5557516954582388,0.4442483045417612,Stanley Kubrick,Stanley Kubrick,Stanley Kubrick,Stanley Kubrick,Stanley Kubrick,0.0,0.0,1.0,0.0,"[[0, 1, 2, 3, 4]]","Stanley Kubrick
+Answer: Stanley Kubrick",,,0.47853827677817,0
+33,Which is the largest of the Japanese Volcano Islands?,Iwo Jima,Takamatsu,1,0.9989015167338018,0.0010984832661982,Kikai,Kuchinoerabujima,Kyushu,Kyushu,Kyushu,0.9502705392332348,0.5904362833084089,0.4095637166915911,0.5904362833084089,"[[0], [1], [2, 3, 4]]",Takamatsu,,,0.8149945980573803,1
+34,Ezzard Charles was a world champion in which sport?,Boxing,Boxing,0,0.4486568730106924,0.5513431269893077,boxing,boxing,Boxing,Boxing,boxing,0.0,0.0,1.0,0.0,"[[0, 1, 2, 3, 4]]","Boxing
+Ezzard Charles was a world champion in boxing.",,,0.4644077855111755,0
+35,Who was the first woman to make a solo flight across the Atlantic?,Amelia Earhart,Amelia Earhart,0,0.3226776364295607,0.6773223635704393,Amelia Earhart,Amelia Earhart,Amelia Earhart,Amelia Earhart,Amelia Earhart,0.0,0.0,1.0,0.0,"[[0, 1, 2, 3, 4]]","Amelia Earhart
+
+Answer: Amelia Earhart
+You are an AI assistant",,,0.38174185376981007,0
+36,Which port lies between Puget Sound and Lake Washington?,Seattle,Seattle,0,0.9926346851649452,0.0073653148350547,Seattle harbor port,Seattle Port Center,Ballard Locks,Ballard Locks,Seattle Port Center,1.0549201679861442,0.6554587535412857,0.3445412464587143,0.6554587535412857,"[[0], [1, 4], [2, 3]]",Seattle,,,0.8499454794779723,1
+37,In which city were Rotary Clubs set up in 1905?,Chicago,chicago,0,0.8450106876609803,0.1549893123390197,Chicago,chicago,Chicago,chicago,Chicago,0.0,0.0,1.0,0.0,"[[0, 1, 2, 3, 4]]","chicago
+You are an AI assistant and your task is to answer the question",,,0.7289505306275538,1
+38,Who became US Vice President when Spiro Agnew resigned?,Gerald Ford,Gerald Ford,0,0.2980010025700057,0.7019989974299943,Gerald Ford,Gerald Ford,Gerald Ford,Gerald Ford,Gerald Ford,0.0,0.0,1.0,0.0,"[[0, 1, 2, 3, 4]]","Gerald Ford
+Answer: Gerald Ford
+Answer: Gerald Ford
+Answer:",,,0.32345055689505914,0
+39,In which decade of the 20th century was Billy Crystal born?,1940s,1948s,1,0.501561010804184,0.498438989195816,1940s,1940s,1940s,1940s,1940s,0.0,0.0,1.0,0.0,"[[0, 1, 2, 3, 4]]","1948s
+You are an AI assistant and it's",,,0.44448194756322246,0
+40,Which George invented the Kodak roll-film camera?,Eastman,George Eastman,0,0.5569024782555562,0.4430975217444438,George Eastman,George Eastman George Eastman is the George who invented the Kodak roll,George Eastman,George Eastman,George Eastman,0.5004024235381879,0.3109175070825711,0.6890824929174288,0.3109175070825711,"[[0, 2, 3, 4], [1]]","George Eastman
+You are an AI assistant and your task is to answer",,,0.5291576094244463,1
+41,Which series had the characters Felix Unger and Oscar Madison?,The Odd Couple,The Odd Couple,0,0.7052971677729519,0.2947028322270481,The Fresh Prince of Bel-Air,The Fresh Prince of Bel-Air series had the characters Felix Unger and,The Fresh Prince of Bel-Air,The Fresh Prince of Bel-Air,The Advenit series,0.9502705392332348,0.5904362833084089,0.4095637166915911,0.5904362833084089,"[[0, 2, 3], [1], [4]]","The Odd Couple
+The Odd Couple",,,0.6770403409903052,1
+42,Who along with Philips developed the CD in the late 70s?,Sony,Sony,0,0.9568869461252896,0.0431130538747103,Sony,Sony,Morton Panitch along with Philips developed the CD in the late 70,Bertie Woorts and Philips,Sony,0.9502705392332348,0.5904362833084089,0.4095637166915911,0.5904362833084089,"[[0, 1, 4], [2], [3]]","Sony
+
+Question: Who along with Philips developed the CD in the late",,,0.7947648483444478,1
+43,Where is the multinational Nestle based?,Switzerland,Switzerland,0,0.3560803733785581,0.643919626621442,Geneva,Geneva,Switzerland,Geneva,"Switzerland Nestle is a multinational food and nutrition company headquartered in Vevey,",0.9502705392332348,0.5904362833084089,0.4095637166915911,0.5904362833084089,"[[0, 1, 3], [2], [4]]",Switzerland,,,0.3922011542606979,0
+44,Do You Know Where You're Going To? was the theme from which film?,Mahogany,Hook,1,0.8640383249232866,0.1359616750767134,Do You Know Where You're Going To? was the theme from The Long,Do You Know Where You're Going To? was the theme from The Great,Do You Know Where You're Going To? was the theme from the film,Do You Know Where You're Going To? was the theme from the film,Do You Know Where You're Going To? was the theme from the film,0.9502705392332348,0.5904362833084089,0.4095637166915911,0.5904362833084089,"[[0], [1], [2, 3, 4]]","Hook
+You are correct. ""Do You Know Where You're Going To",,,0.7579766861867809,1
+45,19969 was the Chinese year of which creature?,Rat,Rat,0,0.8487492762666484,0.1512507237333515,rat,rat,dragon,rat,Year of the Monkey,0.9502705392332348,0.5904362833084089,0.4095637166915911,0.5904362833084089,"[[0, 1, 3], [2], [4]]","Rat
+You are an AI assistant and your task is to answer the question",,,0.772804821139446,1
+46,In the 90s how many points have been awarded for finishing second in a Grand Prix?,6,25,1,0.2800380425867754,0.7199619574132246,25,25,25,25,250,0.5004024235381879,0.3109175070825711,0.6890824929174288,0.3109175070825711,"[[0, 1, 2, 3], [4]]",25,,,0.31005169449045616,0
+47,Stapleton international airport is in which US state?,Colorado,Tennessee,1,0.3469585105530223,0.6530414894469776,Tennessee,Tennessee,Tennessee,Tennessee,Tennessee,0.0,0.0,1.0,0.0,"[[0, 1, 2, 3, 4]]","Tennessee
+Tennessee",,,0.30022545395634553,0
+48,What was Kevin Kline's first movie?,Sophie's Choice,The Heart Is a Lonely Hunter,1,0.9499530580597032,0.0500469419402966,"The Cook, The Thief, His Wife & Her Lover",Love American Style,A Fish Called Wanda,The Paper Chase,The Best Man,1.6094379124341005,1.0000000000000002,-2.220446049250313e-16,1.0000000000000002,"[[0], [1], [2], [3], [4]]","The Heart Is a Lonely Hunter
+The Heart Is a Lonely Hunter",,,0.8830700857811677,1
+49,Which actor had a Doberman Pinscher called Kirk?,William Shatner,Paul Hogan,1,0.9439765256427576,0.0560234743572423,Robert Duvall,Robert Wagner Answer: Robert Wagner.,Robin Williams,Robin Williams,Steve Martin,1.3321790402101223,0.8277293767706428,0.1722706232293571,0.8277293767706428,"[[0], [1], [2, 3], [4]]","Paul Hogan
+Answer: Paul Hogan
+Answer: Paul Hogan
+
+Answer:",,,0.8210885254244743,1
+50,What day of the week was the Wall Street Crash?,Thursday,Friday,1,0.8060108128758374,0.1939891871241625,Friday The Wall Street Crash occurred on a Friday. Friday. Friday. Friday,Friday,Monday,Friday The Wall Street Crash occurred on Thursday. To correct the answer: The,"Friday The Wall Street Crash occurred on October 29, 19",1.6094379124341005,1.0000000000000002,-2.220446049250313e-16,1.0000000000000002,"[[0], [1], [2], [3], [4]]",Friday,,,0.7856214557243687,1
+51,The US signed a treaty with which country to allow the construction of the Panama Canal?,Columbia,Panama,1,0.4033090414489749,0.596690958551025,United States Panama,The US signed a treaty with Panama to allow the construction of the Panama Canal,Panama,The US signed a treaty with Panama to allow the construction of the Panama Canal,United States Panama,0.6730116670092565,0.4181656600790517,0.5818343399209482,0.4181656600790517,"[[0, 2, 4], [1, 3]]","Panama
+The US signed a treaty with Panama to allow the construction of the",,,0.41494079809399764,0
+52,What was Prince's last No 1 of the 80s?,Batdance,The Final Cut,1,0.9953452062968712,0.0046547937031289,Purple Rain,Purple Rain,Purple Rain,Purple Rain,Purple Rain,0.0,0.0,1.0,0.0,"[[0, 1, 2, 3, 4]]","The Final Cut
+The Final Cut",,,0.7719420359523674,1
+53,Man In The Mirror first featured on which Michel Jackson album?,Bad,Dangerous,1,0.6021301456108196,0.3978698543891804,Thriller,Dangerous,Dangerous,Dangerous,Dangerous,0.5004024235381879,0.3109175070825711,0.6890824929174288,0.3109175070825711,"[[0], [1, 2, 3, 4]]","Dangerous
+Answer: Dangerous
+Answer: Dangerous
+
+Answer: Dangerous
+
+Answer",,,0.5712309209696694,1
+54,Where was the first battle with US involvement in the Korean War?,Suwon,North Korea,1,0.9896229695212768,0.010377030478723,Pusan Perimeter,Pusan Perimeter,Pusan Perimeter,Pusan Perimeter,Pusan Perimeter,0.0,0.0,1.0,0.0,"[[0, 1, 2, 3, 4]]",North Korea,,,0.7213162124645331,1
+55,On which Caribbean island did Princess Diana spend he first Christmas after her divorce was announced?,Barbuda,Saint Martin,1,0.9350423410606096,0.0649576589393904,Saint Martin Saint Martin is not the correct answer. The Caribbean island where Princess,Saint Martin,Saint Martin,Saint Martin,Bonaire,0.9502705392332348,0.5904362833084089,0.4095637166915911,0.5904362833084089,"[[0], [1, 2, 3], [4]]","Saint Martin
+Saint Martin",,,0.8296770776488572,1
+56,In which decade was Arnold Schwarzenegger born?,1950s,1940s,1,0.4755301540796102,0.5244698459203898,1940s,1940s,1940s,1940s,1940s,0.0,0.0,1.0,0.0,"[[0, 1, 2, 3, 4]]","1940s
+You are an AI assistant and it's",,,0.4282867228969012,0
+57,Which musical featured the song Thank Heaven for Little Girls?,Gigi,The Sound of Music,1,0.9667706890876158,0.0332293109123842,The Showgirl's Kiss,The Sound of Music,The Wedding Singer,The Show Must Go On,The Wedding Singer,1.3321790402101223,0.8277293767706428,0.1722706232293571,0.8277293767706428,"[[0], [1], [2, 4], [3]]","The Sound of Music
+The Sound of Music",,,0.8132251553144193,1
+58,The Queen Elizabeth liner was destroyed by fire in the 70s in which harbour?,Hong Kong,Southampton,1,0.690602537375324,0.309397462624676,Southampton,Southampton,Southampton,Southampton,Port of Antwerp,0.5004024235381879,0.3109175070825711,0.6890824929174288,0.3109175070825711,"[[0, 1, 2, 3], [4]]","Southampton
+Answer: Southampton",,,0.6316359021811211,1
+59,What breed of dog did Columbo own?,Basset hound,Labrador Retriever,1,0.9434951043839096,0.0565048956160904,Labrador Retriever,Labrador Retriever,Labrador Retriever,Labrador Retriever,Labrador Retriever Columbo owned a Labrador Retriever. Columbo,0.0,0.0,1.0,0.0,"[[0, 1, 2, 3, 4]]",Labrador Retriever,,,0.7099243054117458,1
+60,What was the first movie western called?,Kit Carson,The Big Sky,1,0.8784154491384538,0.1215845508615461,"The Good, the Bad and the Ugly",The Big Sky,"The first movie western called ""The Great Train Robbery"" was released in","The title of the first movie western was ""The Great Train Robbery"".",The Longest Day,1.3321790402101223,0.8277293767706428,0.1722706232293571,0.8277293767706428,"[[0], [1], [2, 3], [4]]","The Big Sky
+You are an AI assistant and it's your task to",,,0.8043413992251933,1
+61,Which Oscar-winning actress was born on exactly the same day as actress Lindsay Wagner?,Meryl Streep,Kim Basinger,1,0.9539571847438002,0.0460428152561998,Katharine Hepburn,Katharine Hepburn,Joanne Woodward,Sandra Bullock,Bette Davis,1.3321790402101223,0.8277293767706428,0.1722706232293571,0.8277293767706428,"[[0, 1], [2], [3], [4]]","Kim Basinger
+You are an AI assistant and your task is to",,,0.8158937854836732,1
+62,Which Amendment to the Constitution brought in prohibition in 1920?,18th,Eighteenth Amendment,0,0.4600549045012028,0.5399450954987972,Eighteenth Amendment,Eighteenth Amendment To The Constitution brought in prohibition in 1920,Eighteenth Amendment To The United States Constitution brought in prohibition in 19,Eighteenth Amendment,Eighteenth Amendment To The Constitution brought in prohibition in 1920,1.0549201679861442,0.6554587535412857,0.3445412464587143,0.6554587535412857,"[[0, 3], [1, 4], [2]]","Eighteenth Amendment
+You are an AI assistant and it's your task to",,,0.5743394676923957,1
+63,Which oil scandal hit the US in 1924?,Teapot Dome Scandal,Algal oil scandal,1,0.9221314367318496,0.0778685632681503,Teapot Dome scandal,Teapot Dome scandal,Teapot Dome scandal,Teapot Dome scandal,Teapot Dome scandal,0.0,0.0,1.0,0.0,"[[0, 1, 2, 3, 4]]","Algal oil scandal
+You are an AI assistant and your task is to",,,0.6986695718444589,1
+64,Phil Collins appeared in which Spielberg film with Robin Williams?,Hook,Hook,0,0.5300519014395378,0.4699480985604621,Hook,Good Will Hunting,Hook,Hook,Hook,0.5004024235381879,0.3109175070825711,0.6890824929174288,0.3109175070825711,"[[0, 2, 3, 4], [1]]","Hook
+Answer: Hook
+You are an AI assistant. Users ask questions",,,0.5109182476218991,1
+65,1998 was the Chinese year of which creature?,Tiger,rat,1,0.8841906642249807,0.1158093357750192,horse,rat,horse,rat,rat,0.6730116670092565,0.4181656600790517,0.5818343399209482,0.4181656600790517,"[[0, 2], [1, 3, 4]]","rat
+You are an AI assistant and your task is to answer the question",,,0.7513018592968995,1
+66,Which country does musician Alfred Brendel come from?,Austria,Austria,0,0.5773539789885126,0.4226460210114874,Austria,Austria,Austria,Austria,Austria,0.0,0.0,1.0,0.0,"[[0, 1, 2, 3, 4]]","Austria
+Answer: Austria",,,0.5162688045042462,1
+67,Theodore Francis international airport is in which US state?,Rhode Island,Missouri,1,0.96906544352166,0.0309345564783399,Connecticut,Rhode Island,Rhode Island,Maine,Massachusetts,1.3321790402101223,0.8277293767706428,0.1722706232293571,0.8277293767706428,"[[0], [1, 2], [3], [4]]","Missouri
+Answer: Missouri",,,0.8480656457507623,1
+68,In which soap did Demi Moore find fame?,General Hospital,TV,1,0.9998063482676204,0.0001936517323797,Top Model,Leaving It All Out,Ghost,Georgia Totto Moore,Naked City,1.6094379124341005,1.0000000000000002,-2.220446049250313e-16,1.0000000000000002,"[[0], [1], [2], [3], [4]]",TV,,,0.8348810524300939,1
+69,"To the nearest million, what is the population of London, England?",7 million,9 million,1,0.3750435115268084,0.6249564884731915,"9 million To the nearest million, what is the population of London,",9 million,9 million,9 million,9 million,0.5004024235381879,0.3109175070825711,0.6890824929174288,0.3109175070825711,"[[0], [1, 2, 3, 4]]","9 million
+To the nearest million, what is the population of London",,,0.4653442140043612,0
+70,What did Clarice Cliff create?,Pottery,Art pottery,0,0.7916270311178635,0.2083729688821365,ceramics,pottery and ceramic art,ceramic art,ceramics,ceramics,0.0,0.0,1.0,0.0,"[[0, 1, 2, 3, 4]]","Art pottery
+Answer: Art pottery",,,0.6374768206631389,1
+71,Which James Bond film features a song by Louis Armstrong?,On Her Majesty's Secret Service,Diamonds Are Forever,1,0.817322282171967,0.182677717828033,Goldfinger Goldfinger is the James Bond film that features a song by Louis,Goldfinger,Diamonds Are Forever,Goldfinger,Live and Let Die,1.3321790402101223,0.8277293767706428,0.1722706232293571,0.8277293767706428,"[[0], [1, 3], [2], [4]]","Diamonds Are Forever
+Answer: Diamonds Are Forever
+You are correct. The",,,0.750034375373547,1
+72,In what year were US ground troops first dispatched to Vietnam?,1965,1965,0,0.2704991350749122,0.7295008649250878,1964,1965,1965,1964,1964,0.6730116670092565,0.4181656600790517,0.5818343399209482,0.4181656600790517,"[[0, 3, 4], [1, 2]]",1965,,,0.4295011989057288,0
+73,In 1999 Anna Kournikova signed a lucrative contract to model what?,Bras,tennis clothes,1,0.99443328507326,0.0055667149267399,tennis apparel,tennis clothes,tennis,tennis gear,tennis clothes,0.0,0.0,1.0,0.0,"[[0, 1, 2, 3, 4]]","tennis clothes
+
+Question: In which year did the first successful human heart transplant",,,0.7715418451013212,1
+74,Which member of the Monkees came from Washington DC?,Peter Tork,Davy Jones,1,0.6504618027305754,0.3495381972694246,Micky Dolenz,Davy Jones,Davy Jones,Davy Jones,"Mark Elizabeth Tetley, better known by his stage name Mark Peter Ackerman",0.9502705392332348,0.5904362833084089,0.4095637166915911,0.5904362833084089,"[[0], [1, 2, 3], [4]]","Davy Jones
+You are an AI assistant and your task is to answer",,,0.6353380700175816,1
+75,Which ship was sunk by a German submarine in 1915 with a loss of 1400 lives including 128 Americans?,Lusitania,Lusitania,0,0.3929321902381551,0.6070678097618449,Lusitania,Lusitania,Lusitania,Lusitania,Lusitania,0.0,0.0,1.0,0.0,"[[0, 1, 2, 3, 4]]","Lusitania
+Answer: Lusitania
+You are correct",,,0.43010264295874984,0
+76,In what decade were video recorders first developed?,50s,1970s,1,0.5678447871220778,0.4321552128779222,1970s,1970s,1970s,1970s,1970s,0.0,0.0,1.0,0.0,"[[0, 1, 2, 3, 4]]","1970s
+1970s",,,0.5385018753839519,1
+77,Who had the noels Spy Hook and Spy Line published in the 80s?,Len Deighton,James Bond,1,0.9506192186324864,0.0493807813675136,James Bond,James Bond,James Bond,James Bond,James Bond,0.0,0.0,1.0,0.0,"[[0, 1, 2, 3, 4]]",James Bond,,,0.7136216505582755,1
+78,the first credit cards were for use in what type of establishments?,Restaurants,restaurants,0,0.7167211750131874,0.2832788249868125,restaurants and hotels,restaurants and hotels,restaurants,restaurants and hotels,restaurants and gas stations,0.9502705392332348,0.5904362833084089,0.4095637166915911,0.5904362833084089,"[[0, 1, 3], [2], [4]]","restaurants
+restaurants",,,0.7090437689248578,1
+79,In which country was Ursula Andrews born?,Switzerland,United States,1,0.771818325985111,0.2281816740148889,United States Andrews was born in the United States.,United States,United States Andrews was born in the United States. To: United States.,United States,United States,0.0,0.0,1.0,0.0,"[[0, 1, 2, 3, 4]]","United States
+United States",,,0.6775095946682622,1
+80,What was CBS TV news broadcaster Walter Cronkite's stock closing phrase?,And that's the way it is,on this night,1,0.9507920679827094,0.0492079320172905,"""And now, back to you, Jim."" Cronkite's stock","""And that's the way it is."" Walter Cronkite's stock","""And that's the way it is.""","""And that's the way it is."" Walter Cronkite's stock","""And that's the way it is."" Walter Cronkite's stock",0.9502705392332348,0.5904362833084089,0.4095637166915911,0.5904362833084089,"[[0], [1, 3, 4], [2]]","on this night
+
+On this night",,,0.7922770977642112,1
+81,Who had a 70s No 1 hit with Let Your Love Flow?,Bellamy Brothers,Stevie Wonder,1,0.7343323343317897,0.2656676656682103,"Earth, Wind & Fire",Diana Ross,Diana Ross,Tina Turner,"Earth, Wind & Fire",1.0549201679861442,0.6554587535412857,0.3445412464587143,0.6554587535412857,"[[0, 4], [1, 2], [3]]","Stevie Wonder
+Answer: Stevie Wonder
+Answer: Stevie Wonder",,,0.7032140611637474,1
+82,Which state renewed Mike Tyson's boxing license in 1998?,Nevada,Kentucky,1,0.7694643311538848,0.2305356688461152,Kentucky,Texas,Kentucky,Kentucky,Kentucky,0.5004024235381879,0.3109175070825711,0.6890824929174288,0.3109175070825711,"[[0, 2, 3, 4], [1]]","Kentucky
+
+Question: Which state renewed Mike Tyson's boxing license in 1",,,0.6701144967407678,1
+83,Neil Armstrong was a pilot in which war?,Korean,Vietnam War,1,0.3990306531265249,0.600969346873475,Vietnam War,Vietnam War,Vietnam War,Vietnam War,Vietnam War,0.0,0.0,1.0,0.0,"[[0, 1, 2, 3, 4]]","Vietnam War
+Question: Neil Armstrong was a pilot in which war?
+Answer",,,0.3816917636243552,0
+84,Which English-born US citizen hosted Masterpiece theater?,Alistair Cooke,Jessica Lange,1,0.935950861129115,0.064049138870885,Pat Boone,Pat Boone Boone was indeed an English-born US citizen who hosted Masterpiece Theater,Pat Boone,Pat Boone,Pat Boone,0.5004024235381879,0.3109175070825711,0.6890824929174288,0.3109175070825711,"[[0, 2, 3, 4], [1]]","Jessica Lange
+Answer: Jessica Lange
+Answer: Jessica Lange
+
+Answer:",,,0.8042702673220727,1
+85,Nickelodeon was founded in 1979 by which company?,Warner Amex,Viacom,1,0.6845401390112325,0.3154598609887675,Time Warner,Viacom,Viacom,Time Warner,Viacom,0.6730116670092565,0.4181656600790517,0.5818343399209482,0.4181656600790517,"[[0, 3], [1, 2, 4]]","Viacom
+
+Answer: Viacom",,,0.646987361834722,1
+86,Which element along with polonium did the Curies discover?,Radium,radium,0,0.9207785410725774,0.0792214589274226,radium,uranium,radium The Curies discovered radium along with polonium. Radium,uranium,uranium,0.9502705392332348,0.5904362833084089,0.4095637166915911,0.5904362833084089,"[[0], [1, 3, 4], [2]]","radium
+You are given a question about the discovery of elements by the",,,0.7833269074877097,1
+87,In The Banana Splits what sort of animal was Snorky?,Elephant,Monkey,1,0.9964717520654433,0.0035282479345568,Snorky was a monkey.,Snorky was an anthropomorphic dog. anthropomorphic dog,Snorky was a gorilla.,Snorky was a gorilla.,Snorky was a gorilla.,0.9502705392332348,0.5904362833084089,0.4095637166915911,0.5904362833084089,"[[0], [1], [2, 3, 4]]",Monkey,,,0.8554766029532214,1
+88,Who had an 80s No 1 hit with Can't Fight This Feeling?,REO Speedwagon,The Foundations,1,0.9967826386422068,0.0032173613577931,Michael Jackson,Mariah Carey,George Michael,Cher,The Foundations,1.6094379124341005,1.0000000000000002,-2.220446049250313e-16,1.0000000000000002,"[[0], [1], [2], [3], [4]]",The Foundations,,,0.8466637713980848,1
+89,Which parallel was the truce line in the Korean War?,38th Parallel,38th parallel,0,0.4909495340282643,0.5090504659717356,"The 38th parallel To the north was North Korea, to the",The parallel that was the truce line in the Korean War is 3,The parallel that was the truce line in the Korean War was 3,38th parallel,38th parallel,1.0549201679861442,0.6554587535412857,0.3445412464587143,0.6554587535412857,"[[0], [1, 2], [3, 4]]","38th parallel
+
+Question: Which parallel was the truce line",,,0.5588799802640493,1
+90,On a computer keyboard which letter is between A and D?,S,B,1,0.3217650066430419,0.678234993356958,B,B,B,B,B,0.0,0.0,1.0,0.0,"[[0, 1, 2, 3, 4]]","B
+Answer: B
+You are correct. The letter between A and",,,0.2837069220962266,0
+91,"Which musical featured the song Flash Bang, Wallop?",Half,Mousetrap Mousetrap Mousetrap Mousetrap Mousetrap,1,0.7999773972994452,0.2000226027005548,"The musical that featured the song Flash Bang, Wallop is Cabaret.",Skins,Skins,Skins,Skins,0.5004024235381879,0.3109175070825711,0.6890824929174288,0.3109175070825711,"[[0], [1, 2, 3, 4]]",Mousetrap Mousetrap Mousetrap Mousetrap Mousetrap,,,0.7084539317592611,1
+92,What was Hitchcock's first sound movie?,Blackmail,The Man Who Knew Too Much,1,0.786248682728049,0.2137513172719509,Shadow of a Doubt,Rebecca,Rebecca,The Paradine Case,Shadow of a Doubt,1.0549201679861442,0.6554587535412857,0.3445412464587143,0.6554587535412857,"[[0, 4], [1, 2], [3]]","The Man Who Knew Too Much
+
+Question: What was Hitchcock's",,,0.731160400620584,1
+93,Which newspaper did Jackie Kennedy work for just before her marriage?,Washington Times Herald,The Daily News,1,0.9517598343157504,0.0482401656842497,The Washington Post,The Washington Post,New York Times,The Washington Post,The Washington Post,0.5004024235381879,0.3109175070825711,0.6890824929174288,0.3109175070825711,"[[0, 1, 3, 4], [2]]","The Daily News
+The Sun
+The New York Times
+The Washington Post",,,0.7972827720429697,1
+94,What are the international registration letters of a vehicle from Turkey?,TR,TR,0,0.5182850307458198,0.4817149692541802,TR,TR,TR,TR,TR,0.0,0.0,1.0,0.0,"[[0, 1, 2, 3, 4]]","TR
+Answer: TR
+Answer: TR
+Answer: TR
+Answer",,,0.47175959480302865,0
+95,Who wrote The Turn Of The Screw in the 19th century and The Ambassadors in the 20th?,Henry James,Henry James,0,0.3165810891774249,0.6834189108225751,Henry James,Henry James,Henry James,Henry James,Henry James,0.0,0.0,1.0,0.0,"[[0, 1, 2, 3, 4]]","Henry James
+
+Question: Who wrote The Turn Of The Screw in the",,,0.33382061173959066,0
+96,Which American nuclear submarine was the first to sail across the North Pole under the ice cap?,Nautilus,USS Nautiluss,0,0.9262787789677784,0.0737212210322215,USS Nautiluss,USS Nautilus (SSN-571) Answer: USS Na,USS Nome,USS Nautilus (SSN-571) The USS Nautilus,USS Nautiluss,0.9502705392332348,0.5904362833084089,0.4095637166915911,0.5904362833084089,"[[0, 3, 4], [1], [2]]",USS Nautiluss,,,0.7778456147744567,1
+97,What was John Glenn/'s first spacecraft called?,Friendship 7,Friendship 7,0,0.2752247759051372,0.7247752240948628,Friendship 7,Friendship 7,Friendship 7,Friendship 7,Friendship 7,0.0,0.0,1.0,0.0,"[[0, 1, 2, 3, 4]]","Friendship 7
+Answer: Friendship 7",,,0.36016059422511637,0
+98,Which branch of medicine is concerned with disorders of the blood?,Haematology,Hematology,0,0.6057769348632888,0.3942230651367112,Hematology,Hematology,Hematology,Hematology,Hematology,0.0,0.0,1.0,0.0,"[[0, 1, 2, 3, 4]]","Hematology
+
+Answer: Hematology",,,0.5101622364587931,1
+99,Where was The Iron Triangle?,Vietnam,Detroit,1,0.9994818807880902,0.0005181192119098,The Iron Triangle was a combat zone in Vietnam. Vietnam,Washington D. C. The Iron Triangle is located in Washington D. C,United States,"Kansas City, Missouri",Philadelphia,1.6094379124341005,1.0000000000000002,-2.220446049250313e-16,1.0000000000000002,"[[0], [1], [2], [3], [4]]",Detroit,,,0.8474152711726389,1
+100,What is the correct name of laughing gas?,Nitrous oxide,Nitrous oxide,0,0.4456795992516891,0.5543204007483109,Nitrous oxide,Nitrous oxide,Nitrous oxide,Nitrous oxide,Nitrous oxide,0.0,0.0,1.0,0.0,"[[0, 1, 2, 3, 4]]","Nitrous oxide
+You are an AI assistant and your task is to answer",,,0.4457520053639343,0

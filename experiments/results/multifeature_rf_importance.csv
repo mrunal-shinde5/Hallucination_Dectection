@@ -1,0 +1,6 @@
+Feature,Importance
+hallucination_probability,0.42571601239838014
+semantic_consistency,0.18088846406199544
+semantic_entropy,0.1657963764085759
+majority_agreement,0.11640348962330205
+unique_answer_count,0.1111956575077465

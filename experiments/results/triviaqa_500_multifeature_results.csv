@@ -1,0 +1,3 @@
+Method,Accuracy,ROC-AUC,PR-AUC,Precision,Recall,F1
+5-Feature Logistic Regression,0.748,0.789,0.8544,0.8161,0.7857,0.8006
+5-Feature Random Forest,0.75,0.795,0.8493,0.8556,0.736,0.7913

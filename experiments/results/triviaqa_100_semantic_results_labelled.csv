@@ -1,0 +1,101 @@
+id,question,reference_answer,actual_label,answer_1,answer_2,answer_3,answer_4,answer_5,semantic_entropy,normalized_entropy,semantic_consistency,semantic_hallucination_score,number_of_clusters,largest_cluster_ratio,unique_answer_count
+1,Which American-born Sinclair won the Nobel Prize for Literature in 1930?,Sinclair Lewis,0,Theodore Dreiser,Sinclair Lewis,Sinclair Lewis,Sinclair Lewis,Sinclair Lewis,0.5004024235381879,0.7219280948873623,0.2780719051126377,0.7219280948873623,2,0.8,2
+2,Where in England was Dame Judi Dench born?,York,1,Leeds,Wakefield,Doncaster,Leeds,Leeds,0.9502705392332347,0.8649735207179272,0.1350264792820728,0.8649735207179272,3,0.6,3
+3,In which decade did Billboard magazine first publish and American hit chart?,30s,1,1950s,1940s,1950s,1950s,1950s,0.5004024235381879,0.7219280948873623,0.2780719051126377,0.7219280948873623,2,0.8,2
+4,From which country did Angola achieve independence in 1975?,Portugal,1,Angola,Angola,Angola,Angola,Angola,0.0,0.0,1.0,0.0,1,1.0,1
+5,Which city does David Soul come from?,Chicago,1,Detroit,Houston,Birmingham,"Washington, D.C.",Baltimore,1.6094379124341005,1.0,0.0,1.0,5,0.2,5
+6,Who won Super Bowl XX?,Chicago Bears,1,Baltimore Colts,Denver Broncos,Denver Broncos,Joe Montana,Joe Montana,1.0549201679861442,0.9602297178607612,0.03977028213923883,0.9602297178607612,3,0.4,3
+7,Which was the first European country to abolish capital punishment?,Norway,1,France,Switzerland,United Kingdom,Spain,Switzerland,1.3321790402101223,0.9609640474436812,0.039035952556318754,0.9609640474436812,4,0.4,4
+8,In which country did he widespread use of ISDN begin in 1988?,Japan,0,Sweden,Finland,Japan,Norway,France,1.6094379124341005,1.0,0.0,1.0,5,0.2,5
+9,What is Bruce Willis' real first name?,Walter,1,David,david,Willis,David,David,0.5004024235381879,0.7219280948873623,0.2780719051126377,0.7219280948873623,2,0.8,2
+10,Which William wrote the novel Lord Of The Flies?,Golding,1,William Golding,William Golding,William Golding,William Golding,William Golding,0.0,0.0,1.0,0.0,1,1.0,1
+11,Which innovation for the car was developed by Prince Henry of Prussia in 1911?,Windshield wipers,0,hydraulic clutch,Clutch,Velo seat belt,rear view mirror,front windscreen,1.6094379124341005,1.0,0.0,1.0,5,0.2,5
+12,How is musician William Lee Conley better known?,Big Bill Broonzy,1,Willie Jones,Willie Jones,Willie Jones,Billy Gibbons,William Lee Davidson,0.9502705392332347,0.8649735207179272,0.1350264792820728,0.8649735207179272,3,0.6,3
+13,How is Joan Molinsky better known?,Joan Rivers,1,Joan Molinsky better known as Joan Rivers,Joan Molinsky better known as Joan Rivers,Joan Molinsky is better known as Joan Rivers.,Joan Molinsky is better known as Joan Rivers.,Joan Martin,0.5004024235381879,0.7219280948873623,0.2780719051126377,0.7219280948873623,2,0.8,3
+14,In which branch of the arts is Patricia Neary famous?,Ballet,1,dance,drama,sculpture,drama,sculpture,1.0549201679861442,0.9602297178607612,0.03977028213923883,0.9602297178607612,3,0.4,3
+15,Which country is Europe's largest silk producer?,Italy,1,China,China,China,China,China,0.0,0.0,1.0,0.0,1,1.0,1
+16,The VS-300 was a type of what?,Helicopter,1,headset,headphone,headphone,headphone,headphone,0.5004024235381879,0.7219280948873623,0.2780719051126377,0.7219280948873623,2,0.8,2
+17,At which university did Joseph Goebbels become a doctor of philosophy?,Heidelberg,1,University of Berlin,University of Berlin,University of Berlin,University of Berlin,University of Berlin,0.0,0.0,1.0,0.0,1,1.0,1
+18,Which prince is Queen Elizabeth II's youngest son?,Edward,1,Andrew,Andrew,Andrew,Prince Andrew,Prince Andrew,0.6730116670092565,0.9709505944546688,0.029049405545331197,0.9709505944546688,2,0.6,2
+19,When did the founder of Jehovah's Witnesses say the world would end?,1914,1,1975,1975,1975,1975,1975,0.0,0.0,1.0,0.0,1,1.0,1
+20,Who found the remains of the Titanic?,Robert Ballard,0,Robert Ballard,Robert Ballard,Robert Ballard,Robert Ballard,Robert Ballard,0.0,0.0,1.0,0.0,1,1.0,1
+21,Who was the only Spice Girl not to have a middle name?,Posh Spice,1,Scary Spice,Scary Spice,Posh Spice,Scary Spice,Scary Spice,0.5004024235381879,0.7219280948873623,0.2780719051126377,0.7219280948873623,2,0.8,2
+22,What are the international registration letters of a vehicle from Algeria?,DZ,1,AG,DZ,DA,D,AL,1.3321790402101223,0.9609640474436812,0.039035952556318754,0.9609640474436812,4,0.4,5
+23,How did Jock die in Dallas?,Helicopter accident,1,heart attack,murdered,heart attack,heart attack,drowned,0.9502705392332347,0.8649735207179272,0.1350264792820728,0.8649735207179272,3,0.6,3
+24,What star sign is Michael Caine?,Pisces,1,Aquarius,Taurus,Aquarius,Cancer,Virgo,1.3321790402101223,0.9609640474436812,0.039035952556318754,0.9609640474436812,4,0.4,4
+25,Who wrote the novel Evening Class?,Maeve Binchy,1,Herman Melville,Yukio Mishima,Herman Melville,Arthur C. Clarke,Vladimir Nabokov,1.3321790402101223,0.9609640474436812,0.039035952556318754,0.9609640474436812,4,0.4,4
+26,Which country does the airline Air Pacific come from?,Fiji,0,Papua New Guinea,Fiji,Tonga,Samoa,Papua New Guinea,1.3321790402101223,0.9609640474436812,0.039035952556318754,0.9609640474436812,4,0.4,4
+27,In which branch of the arts does Allegra Kent work?,Ballet,1,film,film directing Kent is a film director.,fashion,television,theatre,1.6094379124341005,1.0,0.0,1.0,5,0.2,5
+28,"Who had a 70s No 1 hit with Billy, Don't Be A Hero?",Bo Donaldson & The Heywoods,1,Steppenwolf,Eagles,Queen,Styx,Foreigner,1.6094379124341005,1.0,0.0,1.0,5,0.2,5
+29,Banting and Best pioneered the use of what?,Insulin,0,insulin,insulin,insulin,insulin,insulin,0.0,0.0,1.0,0.0,1,1.0,1
+30,Who directed the movie La Dolce Vita?,Federico Fellini,0,Federico Fellini,Federico Fellini,Federico Fellini,Federico Fellini,Federico Fellini,0.0,0.0,1.0,0.0,1,1.0,1
+31,Which country does the airline LACSA come from?,Costa Rica,1,Paraguay,Brazil,Bolivia,Uruguay,Bolivia,1.3321790402101223,0.9609640474436812,0.039035952556318754,0.9609640474436812,4,0.4,4
+32,Who directed 2001: A Space Odyssey?,Stanley Kubrick,0,Stanley Kubrick,Stanley Kubrick,Stanley Kubrick,Stanley Kubrick,Stanley Kubrick,0.0,0.0,1.0,0.0,1,1.0,1
+33,Which is the largest of the Japanese Volcano Islands?,Iwo Jima,1,Minami-Daitō-jima,Kita-Iwo-jima,Chichijima,Chichibun-dake,Tokashiki-jima,1.6094379124341005,1.0,0.0,1.0,5,0.2,5
+34,Ezzard Charles was a world champion in which sport?,Boxing,0,boxing,Boxing,Boxing,boxing,Boxing,0.0,0.0,1.0,0.0,1,1.0,1
+35,Who was the first woman to make a solo flight across the Atlantic?,Amelia Earhart,0,Amelia Earhart,Amelia Earhart,Amelia Earhart,Amelia Earhart,Amelia Earhart,0.0,0.0,1.0,0.0,1,1.0,1
+36,Which port lies between Puget Sound and Lake Washington?,Seattle,0,Elliott Bay,Seattle Port,Seattle,Salmon River narrows,Seattle,1.3321790402101223,0.9609640474436812,0.039035952556318754,0.9609640474436812,4,0.4,4
+37,In which city were Rotary Clubs set up in 1905?,Chicago,0,chicago,chicago,chicago,chicago,chicago,0.0,0.0,1.0,0.0,1,1.0,1
+38,Who became US Vice President when Spiro Agnew resigned?,Gerald Ford,0,Gerald Ford,Gerald R. Ford,Gerald R. Ford,Gerald Ford,Gerald Ford,0.0,0.0,1.0,0.0,1,1.0,2
+39,In which decade of the 20th century was Billy Crystal born?,1940s,1,1948s,1948s,1948s,1940s,1948s,0.5004024235381879,0.7219280948873623,0.2780719051126377,0.7219280948873623,2,0.8,2
+40,Which George invented the Kodak roll-film camera?,Eastman,1,George Eastman,George Eastman,George Eastman,George Eastman,George Eastman,0.0,0.0,1.0,0.0,1,1.0,1
+41,Which series had the characters Felix Unger and Oscar Madison?,The Odd Couple,0,The Newly Married Couple,The Odd Couple,The Odd Couple,The Fresh Prince of Bel-Air,The Newlywed Game,1.3321790402101223,0.9609640474436812,0.039035952556318754,0.9609640474436812,4,0.4,4
+42,Who along with Philips developed the CD in the late 70s?,Sony,0,Morton,Brian Eno,Riccardo Magoni,CBS,Hermann Lietz,1.6094379124341005,1.0,0.0,1.0,5,0.2,5
+43,Where is the multinational Nestle based?,Switzerland,0,Switzerland,Switzerland,Switzerland,Switzerland,Switzerland,0.0,0.0,1.0,0.0,1,1.0,1
+44,Do You Know Where You're Going To? was the theme from which film?,Mahogany,1,You're So Vain,Hook,The Taking of Pelham 123,Hook,Hook,0.9502705392332347,0.8649735207179272,0.1350264792820728,0.8649735207179272,3,0.6,3
+45,19969 was the Chinese year of which creature?,Rat,0,tiger,rat,Rat,Rat,Dragon,0.9502705392332347,0.8649735207179272,0.1350264792820728,0.8649735207179272,3,0.6,3
+46,In the 90s how many points have been awarded for finishing second in a Grand Prix?,6,1,25,12,25,25,25,0.5004024235381879,0.7219280948873623,0.2780719051126377,0.7219280948873623,2,0.8,2
+47,Stapleton international airport is in which US state?,Colorado,1,Tennessee,Tennessee,Tennessee,Tennessee,Tennessee,0.0,0.0,1.0,0.0,1,1.0,1
+48,What was Kevin Kline's first movie?,Sophie's Choice,1,A Time to Kill,The Towering Inferno,A Field in England,Love Affair,The Money Pit,1.6094379124341005,1.0,0.0,1.0,5,0.2,5
+49,Which actor had a Doberman Pinscher called Kirk?,William Shatner,1,Tom Cruise,Patrick Dempsey,Patrick Dempsey,Tim Roth,Tim Robbins,1.3321790402101223,0.9609640474436812,0.039035952556318754,0.9609640474436812,4,0.4,4
+50,What day of the week was the Wall Street Crash?,Thursday,1,Monday,Thursday,Friday,Friday,Tuesday,1.3321790402101223,0.9609640474436812,0.039035952556318754,0.9609640474436812,4,0.4,4
+51,The US signed a treaty with which country to allow the construction of the Panama Canal?,Columbia,1,Colombia,Panama,Panama,Panama,Panama,0.5004024235381879,0.7219280948873623,0.2780719051126377,0.7219280948873623,2,0.8,2
+52,What was Prince's last No 1 of the 80s?,Batdance,1,One Moment to Live,The Groove Anthem,InBackground (1989),When It Fells,Let's Be Masters of Love,1.6094379124341005,1.0,0.0,1.0,5,0.2,5
+53,Man In The Mirror first featured on which Michel Jackson album?,Bad,1,Thriller,Dangerous,Dangerous,Dangerous,Dangerous,0.5004024235381879,0.7219280948873623,0.2780719051126377,0.7219280948873623,2,0.8,2
+54,Where was the first battle with US involvement in the Korean War?,Suwon,1,Pusan Perimeter,North Korea,Pusan Perimeter,Osan,Pusan Perimeter,0.9502705392332347,0.8649735207179272,0.1350264792820728,0.8649735207179272,3,0.6,3
+55,On which Caribbean island did Princess Diana spend he first Christmas after her divorce was announced?,Barbuda,1,Saint Barts Saint Bart Saint Barts Saint Bart Saint Bart Saint Bart Saint Barts Saint Bart Saint Barts Saint Bart Saint Barts Saint Bart Saint,Saint Martin,Saint Lucia,Bonaire,St. Barts,1.3321790402101223,0.9609640474436812,0.039035952556318754,0.9609640474436812,4,0.4,5
+56,In which decade was Arnold Schwarzenegger born?,1950s,1,1940s,1940s,1940s,1940s,1940s,0.0,0.0,1.0,0.0,1,1.0,1
+57,Which musical featured the song Thank Heaven for Little Girls?,Gigi,1,Allegro,Once,The Sound of Music,Kinky Boots,Show Boat,1.6094379124341005,1.0,0.0,1.0,5,0.2,5
+58,The Queen Elizabeth liner was destroyed by fire in the 70s in which harbour?,Hong Kong,1,Southampton,Southampton,Southampton,Southampton,Southampton,0.0,0.0,1.0,0.0,1,1.0,1
+59,What breed of dog did Columbo own?,Basset hound,1,Pug,Maltese,Labrador Retriever,Labrador Retriever,Labrador Retriever,0.9502705392332347,0.8649735207179272,0.1350264792820728,0.8649735207179272,3,0.6,3
+60,What was the first movie western called?,Kit Carson,1,The Texas Rangers,Cattle国Round-Up,Stagecoach,The Big Trail,Stagecoach,1.3321790402101223,0.9609640474436812,0.039035952556318754,0.9609640474436812,4,0.4,4
+61,Which Oscar-winning actress was born on exactly the same day as actress Lindsay Wagner?,Meryl Streep,1,Katharine Hepburn,Katharine Hepburn,Jessica Lange,Katharine Hepburn,Jean Arthur,0.9502705392332347,0.8649735207179272,0.1350264792820728,0.8649735207179272,3,0.6,3
+62,Which Amendment to the Constitution brought in prohibition in 1920?,18th,1,Eighteenth Amendment,Eighteenth Amendment To The Constitution brought in prohibition in 1920. Toxin,18th Amendment,Eighteenth Amendment,Eighteenth Amendment,0.5004024235381879,0.7219280948873623,0.2780719051126377,0.7219280948873623,2,0.8,3
+63,Which oil scandal hit the US in 1924?,Teapot Dome Scandal,1,Alarmin scandal,Texas oil scandal,Alaskan oil scandal,Teapot Dome scandal,Teapot Dome scandal,1.3321790402101223,0.9609640474436812,0.039035952556318754,0.9609640474436812,4,0.4,4
+64,Phil Collins appeared in which Spielberg film with Robin Williams?,Hook,0,Hook,E.T. the Extra-Terrestrial,Hook,Hook,Hook,0.5004024235381879,0.7219280948873623,0.2780719051126377,0.7219280948873623,2,0.8,2
+65,1998 was the Chinese year of which creature?,Tiger,1,tiger,monkey,horse,Pig,horse,1.3321790402101223,0.9609640474436812,0.039035952556318754,0.9609640474436812,4,0.4,4
+66,Which country does musician Alfred Brendel come from?,Austria,0,Austria,Austria,Austria,Austria,Austria,0.0,0.0,1.0,0.0,1,1.0,1
+67,Theodore Francis international airport is in which US state?,Rhode Island,1,Massachusetts,Missouri,Missouri,Massachusetts,Massachusetts,0.6730116670092565,0.9709505944546688,0.029049405545331197,0.9709505944546688,2,0.6,2
+68,In which soap did Demi Moore find fame?,General Hospital,1,Basic Instinct,TV,Playboy TV,Basic Instinct,Strange Love,1.3321790402101223,0.9609640474436812,0.039035952556318754,0.9609640474436812,4,0.4,4
+69,"To the nearest million, what is the population of London, England?",7 million,1,8,9 million,9 million,9 million,9 million,0.5004024235381879,0.7219280948873623,0.2780719051126377,0.7219280948873623,2,0.8,2
+70,What did Clarice Cliff create?,Pottery,1,Art pottery,pottery,pottery,pottery,ceramics,0.6730116670092565,0.9709505944546688,0.029049405545331197,0.9709505944546688,2,0.6,3
+71,Which James Bond film features a song by Louis Armstrong?,On Her Majesty's Secret Service,1,Diamonds are Forever,Goldfinger,Diamonds are Forever,Diamonds are Forever,Goldfinger,0.6730116670092565,0.9709505944546688,0.029049405545331197,0.9709505944546688,2,0.6,2
+72,In what year were US ground troops first dispatched to Vietnam?,1965,0,1965,1965,1965,1965,1965,0.0,0.0,1.0,0.0,1,1.0,1
+73,In 1999 Anna Kournikova signed a lucrative contract to model what?,Bras,1,tennis gear,tennis clothing,Tennis clothes,tennis gear,tennis apparel,0.0,0.0,1.0,0.0,1,1.0,4
+74,Which member of the Monkees came from Washington DC?,Peter Tork,1,Mike Nesmith,Davy Jones,Mark Mothersbaugh,Mark David Chapman,Micky Dolenz,1.6094379124341005,1.0,0.0,1.0,5,0.2,5
+75,Which ship was sunk by a German submarine in 1915 with a loss of 1400 lives including 128 Americans?,Lusitania,0,Lusitania,Lusitania,Lusitania,Lusitania,Lusitania,0.0,0.0,1.0,0.0,1,1.0,1
+76,In what decade were video recorders first developed?,50s,1,1970s,1970s,1970s,1970s,1970s,0.0,0.0,1.0,0.0,1,1.0,1
+77,Who had the noels Spy Hook and Spy Line published in the 80s?,Len Deighton,1,Simon Pegg and Rowan Atkinson,James Bond,Simon Rycroft,James Bond novels,MI6,1.6094379124341005,1.0,0.0,1.0,5,0.2,5
+78,the first credit cards were for use in what type of establishments?,Restaurants,0,restaurants and hotels,restaurants,restaurants and hotels,restaurants,restaurants and hotels,0.6730116670092565,0.9709505944546688,0.029049405545331197,0.9709505944546688,2,0.6,2
+79,In which country was Ursula Andrews born?,Switzerland,1,United States,United Kingdom,United States,Germany,United Kingdom,1.0549201679861442,0.9602297178607612,0.03977028213923883,0.9602297178607612,3,0.4,3
+80,What was CBS TV news broadcaster Walter Cronkite's stock closing phrase?,And that's the way it is,1,on this day To: On this day.,"""And that's the way it is.""",on the average,on this day To this day,On my word.,1.3321790402101223,0.9609640474436812,0.039035952556318754,0.9609640474436812,4,0.4,5
+81,Who had a 70s No 1 hit with Let Your Love Flow?,Bellamy Brothers,1,Stevie Wonder,"Earth, Wind & Fire",Stevie Wonder,Diana Ross,"Earth, Wind & Fire",1.0549201679861442,0.9602297178607612,0.03977028213923883,0.9602297178607612,3,0.4,3
+82,Which state renewed Mike Tyson's boxing license in 1998?,Nevada,1,Kentucky,Texas,Kentucky,Kentucky,Kentucky,0.5004024235381879,0.7219280948873623,0.2780719051126377,0.7219280948873623,2,0.8,2
+83,Neil Armstrong was a pilot in which war?,Korean,1,Vietnam War,Vietnam War,Vietnam War,Vietnam War,Vietnam War,0.0,0.0,1.0,0.0,1,1.0,1
+84,Which English-born US citizen hosted Masterpiece theater?,Alistair Cooke,1,Virginia McKenna,Tracy Everett,Laura Kightlinger,Pat Boone,Pat Boone,1.3321790402101223,0.9609640474436812,0.039035952556318754,0.9609640474436812,4,0.4,4
+85,Nickelodeon was founded in 1979 by which company?,Warner Amex,1,Viacom,Viacom,Time Warner,Viacom,Viacom,0.5004024235381879,0.7219280948873623,0.2780719051126377,0.7219280948873623,2,0.8,2
+86,Which element along with polonium did the Curies discover?,Radium,0,uranium,uranium,uranium,uranium,radium,0.5004024235381879,0.7219280948873623,0.2780719051126377,0.7219280948873623,2,0.8,2
+87,In The Banana Splits what sort of animal was Snorky?,Elephant,1,Koala,Monkey,Monkey,Koala,Dog,1.0549201679861442,0.9602297178607612,0.03977028213923883,0.9602297178607612,3,0.4,3
+88,Who had an 80s No 1 hit with Can't Fight This Feeling?,REO Speedwagon,1,Bryan Adams,Toto,Mötley Crüe,Rodney Richmond,Rick Springfield,1.6094379124341005,1.0,0.0,1.0,5,0.2,5
+89,Which parallel was the truce line in the Korean War?,38th Parallel,0,38th parallel,38th parallel,38th parallel,38th parallel,38th parallel,0.0,0.0,1.0,0.0,1,1.0,1
+90,On a computer keyboard which letter is between A and D?,S,1,C,B,B,B,B,0.5004024235381879,0.7219280948873623,0.2780719051126377,0.7219280948873623,2,0.8,2
+91,"Which musical featured the song Flash Bang, Wallop?",Half,1,Mousetrap,Agent X,The Lumineers,The Theory of Everything,Mousetrap,1.3321790402101223,0.9609640474436812,0.039035952556318754,0.9609640474436812,4,0.4,4
+92,What was Hitchcock's first sound movie?,Blackmail,1,Repulsion,The Paradine Case,Shadow of a疑虑的影子of疑虑的影子的影子of疑虑的影子of疑虑的影子of,The39Steps,Rebecca,1.6094379124341005,1.0,0.0,1.0,5,0.2,5
+93,Which newspaper did Jackie Kennedy work for just before her marriage?,Washington Times Herald,1,The Washington Post,The Palm Beach Post,The Daily Compass,The Palm Beach Post,The Daily News,1.3321790402101223,0.9609640474436812,0.039035952556318754,0.9609640474436812,4,0.4,4
+94,What are the international registration letters of a vehicle from Turkey?,TR,0,TR,TR,TR,TR,TR,0.0,0.0,1.0,0.0,1,1.0,1
+95,Who wrote The Turn Of The Screw in the 19th century and The Ambassadors in the 20th?,Henry James,0,Henry James,Henry James,Henry James,Henry James,Henry James,0.0,0.0,1.0,0.0,1,1.0,1
+96,Which American nuclear submarine was the first to sail across the North Pole under the ice cap?,Nautilus,1,USS Nautiluss,USS Nautilus (SSN-594),USS Nautilus,Halibut,Halibut,1.3321790402101223,0.9609640474436812,0.039035952556318754,0.9609640474436812,4,0.4,4
+97,What was John Glenn/'s first spacecraft called?,Friendship 7,0,Friendship 7,Friendship 7,Friendship 7,Friendship 7,Friendship 7,0.0,0.0,1.0,0.0,1,1.0,1
+98,Which branch of medicine is concerned with disorders of the blood?,Haematology,1,Hematology,Hematology,Hematology,Hematology,Hematology,0.0,0.0,1.0,0.0,1,1.0,1
+99,Where was The Iron Triangle?,Vietnam,1,Chicago,"San Diego, California",Warsaw,Berlin,"San Diego, California",1.3321790402101223,0.9609640474436812,0.039035952556318754,0.9609640474436812,4,0.4,4
+100,What is the correct name of laughing gas?,Nitrous oxide,0,Nitrous oxide,Nitrous oxide,Nitrous oxide,Nitrous oxide,Nitrous oxide,0.0,0.0,1.0,0.0,1,1.0,1
